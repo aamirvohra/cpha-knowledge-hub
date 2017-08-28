@@ -1,0 +1,22 @@
+.search-wrapper {
+  margin: 20px 0;
+
+  input{
+    border: 1px solid #CCCCCC;
+    height: 40px;
+
+    ::-webkit-input-placeholder {
+      color: #555555;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+
+    img {
+      width: 75%;
+    }
+  }
+}

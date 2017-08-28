@@ -1,3 +1,27 @@
-<p>
-  header works!
-</p>
+<div class="header-wrapper row">
+    <div class="col-md-4 col-md-offset-8 top-nav-menu">
+      <ul class="nav nav-pills">
+        <li>
+          <a>Log in / Register</a>
+        </li>
+        <li>
+          <a>About Us</a>
+        </li>
+        <li>
+          <a>Contact Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-7 logo">
+      <img [src]="logo" class="img-responsive">
+    </div>
+
+    <div class="col-md-5 search">
+      <app-search></app-search>
+    </div>
+
+  <div class="nav">
+    <app-main-nav></app-main-nav>
+  </div>
+</div>

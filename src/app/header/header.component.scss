@@ -1,0 +1,25 @@
+.header-wrapper {
+  border: 2px solid gray;
+
+  .top-nav-menu {
+
+    .nav {
+      float: right;
+      margin-top: 10px;
+
+      li {
+        padding: 0 10px;
+        border-right: 1px solid #555555;
+
+        &:last-child {
+          border: none;
+        }
+
+        a {
+          padding: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
