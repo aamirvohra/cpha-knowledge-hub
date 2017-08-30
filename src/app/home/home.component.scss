@@ -1,7 +1,6 @@
 .home-wrapper {
   margin-top: 20px;
   margin-bottom: 20px;
-  border: 2px solid gray;
 
   .banner {
     img {
@@ -15,14 +14,24 @@
     margin-right: 0;
 
     > div {
-      padding: 30px;
-      background-color: #EEEEEE;
       text-align: center;
 
+      &:first-child {
+        padding-left: 0;
+      }
 
-      .featured-text {
-        margin-top: 30px;
-        text-align: left;
+      &:last-child {
+        padding-right: 0;
+      }
+
+      .featured-content {
+        padding: 30px;
+        background-color: #EEEEEE;
+
+        .featured-text {
+          margin-top: 20px;
+          text-align: left;
+        }
       }
     }
   }
