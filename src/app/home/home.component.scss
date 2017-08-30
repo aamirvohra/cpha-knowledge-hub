@@ -3,6 +3,20 @@
   margin-bottom: 20px;
 
   .banner {
+
+    .banner-text {
+      font-size: 1.571rem;
+      color: #FFFFFF;
+      background-color: #555555;
+      position: absolute;
+      top: 70px;
+      left: 15px;
+      width: 380px;
+      padding: 30px;
+      line-height: 1.4em;
+      opacity: 0.4;
+    }
+
     img {
       width: 100%;
     }
