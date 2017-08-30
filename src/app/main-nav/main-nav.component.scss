@@ -1,4 +1,11 @@
 .main-nav-wrapper {
+
+  .menu-icon {
+    @media (max-width: 991px) {
+      margin: 10px 5px;
+    }
+  }
+
   .nav-bar {
     .nav {
       border-spacing: 5px;

@@ -20,4 +20,6 @@ export class AppURLRepo {
 
   public static readonly DOWNLOAD: string = AppURLRepo.IMG_URL + '/' + 'download-icon.png';
 
+  public static readonly MENU_ICON: string = AppURLRepo.IMG_URL + '/' + 'menu-icon.png';
+
 }

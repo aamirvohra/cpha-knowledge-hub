@@ -3,7 +3,6 @@
   margin-bottom: 20px;
 
   .banner {
-
     .banner-text {
       font-size: 1.571rem;
       color: #FFFFFF;
@@ -19,6 +18,8 @@
 
     img {
       width: 100%;
+
+      @media (max-width: 991px) {}
     }
   }
 

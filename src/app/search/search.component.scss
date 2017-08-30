@@ -1,9 +1,23 @@
 .search-wrapper {
   margin: 20px 0;
 
+  @media (max-width: 991px) {
+    margin: 10px 5px;
+  }
+
+  .form-group {
+    @media (max-width: 991px) {
+      margin-bottom: 0;
+    }
+  }
+
   input{
     border: 1px solid #CCCCCC;
     height: 40px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
 
     ::-webkit-input-placeholder {
       color: #555555;
@@ -14,6 +28,10 @@
     position: absolute;
     top: 28px;
     right: 30px;
+
+    @media (max-width: 991px) {
+      position: static;
+    }
 
     img {
       width: 75%;
