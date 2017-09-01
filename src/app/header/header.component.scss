@@ -4,6 +4,10 @@
     padding-bottom: 20px;
     border-bottom: 5px solid #EEEEEE;
   }
+
+  @media (max-width: 767px) {
+    padding-bottom: 15px;
+  }
   
   .top-nav-menu {
     .nav {
