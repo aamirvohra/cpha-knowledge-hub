@@ -22,4 +22,6 @@ export class AppURLRepo {
 
   public static readonly MENU_ICON: string = AppURLRepo.IMG_URL + '/' + 'menu-icon.png';
 
+  public static readonly CLOSE: string = AppURLRepo.IMG_URL + '/' + 'menu-close-icon.png';
+
 }

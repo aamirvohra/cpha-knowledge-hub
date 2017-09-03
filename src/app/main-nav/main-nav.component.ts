@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppURLRepo } from '../../utils/app-url-repo';
 
 @Component({
@@ -6,13 +6,19 @@ import { AppURLRepo } from '../../utils/app-url-repo';
   templateUrl: './main-nav.component.html',
   styleUrls: ['./main-nav.component.scss']
 })
-export class MainNavComponent implements OnInit {
+export class MainNavComponent {
 
   public menuIcon = AppURLRepo.MENU_ICON;
+  public close = AppURLRepo.CLOSE;
 
-  constructor() { }
+  public isMenuOpen: boolean;
 
-  ngOnInit() {
+  constructor() {
+    this.isMenuOpen = false;
+  }
+
+  public toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
 }
