@@ -24,4 +24,10 @@ export class AppURLRepo {
 
   public static readonly CLOSE: string = AppURLRepo.IMG_URL + '/' + 'menu-close-icon.png';
 
+  public static readonly SMALL_CROSS: string = AppURLRepo.IMG_URL + '/' + 'small-x-icon.png';
+
+  public static readonly PRINT: string = AppURLRepo.IMG_URL + '/' + 'print-icon.png';
+
+  public static readonly SHARE: string = AppURLRepo.IMG_URL + '/' + 'share-icon.png';
+
 }

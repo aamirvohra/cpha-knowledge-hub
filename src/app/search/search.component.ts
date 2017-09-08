@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppURLRepo } from '../../utils/app-url-repo';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -10,7 +11,13 @@ export class SearchComponent implements OnInit {
 
   public searchIcon: string = AppURLRepo.SEARCH_ICON;
 
-  constructor() { }
+  public searchForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.searchForm = this.fb.group({
+      search: ['']
+    });
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,24 @@
+.breadcrumbs-wrapper {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: #cfcfcf;
+
+    li {
+      display: inline-block;
+      padding: 5px 0 5px 5px;
+
+      &:after {
+        content: " /";
+      }
+
+      &:last-child:after {
+        content: " ";
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+}
