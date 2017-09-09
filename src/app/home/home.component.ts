@@ -10,10 +10,6 @@ export class HomeComponent implements OnInit {
 
   public banner: string = AppURLRepo.BANNER;
 
-  public featuredIcon: string = AppURLRepo.FEATURED;
-
-  public downloadIcon: string = AppURLRepo.DOWNLOAD;
-
   constructor() { }
 
   ngOnInit() {
