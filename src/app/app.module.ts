@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { RegulationComponent } from './regulation/regulation.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BsDatepickerModule } from 'ngx-bootstrap';
+import { BsDatepickerModule, PaginationModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap';
     APP_ROUTES,
     ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

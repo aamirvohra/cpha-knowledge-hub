@@ -1,10 +1,20 @@
 <div class="regulation-wrapper">
   <div class="row no-margin">
-    <div class="col-md-9">
-      <div class="title">
-        <h1>Regulation</h1>
-      </div>
+    <div class="col-md-9 title">
+      <h1>Regulation</h1>
+    </div>
 
+    <div class="icons hidden-xs col-md-3">
+      <div>
+        <img [src]="print">
+      </div>
+      <div>
+        <img [src]="share"> <span class="share">Share</span>
+      </div>
+    </div>
+  </div>
+  <div class="row no-margin">
+    <div class="col-md-9">
       <div class="breadcrumbs">
         <app-breadcrumbs></app-breadcrumbs>
       </div>
@@ -32,98 +42,98 @@
         <div [hidden]="!displayFilterForm" class="filter-form-wrapper">
           <form [formGroup]="filterForm">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 col-sm-6 col-xs-8">
                 FILTERS
               </div>
 
-              <div (click)="toggleFilter()" class="col-md-2 col-md-offset-6 close-button">
+              <div (click)="toggleFilter()" class="col-md-2 col-md-offset-6 col-sm-2 col-sm-offset-4 col-xs-2 col-xs-offset-2 close-button">
                 <img class="img-responsive" [src]="smallCross">
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-4">
-                Source Type
+            <div class="row filters">
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="filter-title">Source Type</div>
+                <div  class="filter-criteria sourcetype-checkbox" formGroupName="sourceType">
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="all" value="true">All
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="international" value="true">International
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="national" value="true">National
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="provincial" value="true">Provincial
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="background" value="true">Background
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="policy" value="true">Policy
+                    </label>
+                  </div>
+                </div>
               </div>
 
-              <div class="col-md-4">
-                Date Range
+              <div class="clearfix visible-xs-block"></div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12 date-range">
+                <div class="filter-title">Date Range</div>
+                <div class="filter-criteria">
+                    <div class="rangeFrom">
+                      <label>Between</label>
+                      <input type="text"
+                             #df="bsDatepicker"
+                             formControlName="dateRangeFrom"
+                             [bsConfig]="{ containerClass: 'theme-default', showWeekNumbers: false }"
+                             [maxDate]="maxDate"
+                             placeholder="DD/MM/YYYY"
+                             bsDatepicker>
+                      <i (click)="df.toggle()" class="fa fa-calendar"></i>
+                    </div>
+
+                    <div class="rangeTo">
+                      <label>And</label>
+                      <input type="text"
+                             #dt="bsDatepicker"
+                             formControlName="dateRangeTo"
+                             [bsConfig]="{ containerClass: 'theme-default', showWeekNumbers: false }"
+                             [minDate]="dateRangeFromMinDate"
+                             [maxDate]="maxDate"
+                             placeholder="DD/MM/YYYY"
+                             bsDatepicker>
+                      <i (click)="dt.toggle()" class="fa fa-calendar"></i>
+                    </div>
+                </div>
               </div>
 
-              <div class="col-md-4">
-                Title
+              <div class="clearfix visible-sm-block"></div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="filter-title">Title</div>
+                <div class="filter-criteria">
+                  <input class="form-control" placeholder="Enter Keyword">
+                </div>
               </div>
             </div>
-
-            <div class="row">
-              <div class="col-md-4 sourceType-checkbox" formGroupName="sourceType">
-                <div class="col-md-6">
-                  <label>
-                    <input type="checkbox" formControlName="all" value="true">All
-                  </label>
-                </div>
-
-                <div class="col-md-6">
-                  <label>
-                    <input type="checkbox" formControlName="international" value="true">International
-                  </label>
-                </div>
-
-                <div class="col-md-6">
-                  <label>
-                    <input type="checkbox" formControlName="national" value="true">National
-                  </label>
-                </div>
-
-                <div class="col-md-6">
-                  <label>
-                    <input type="checkbox" formControlName="provincial" value="true">Provincial
-                  </label>
-                </div>
-
-                <div class="col-md-6">
-                  <label>
-                    <input type="checkbox" formControlName="background" value="true">Background
-                  </label>
-                </div>
-
-                <div class="col-md-6">
-                  <label>
-                    <input type="checkbox" formControlName="policy" value="true">Policy
-                  </label>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="rangeFrom">
-                  <label>Between</label>
-                  <input type="text"
-                         #df="bsDatepicker"
-                         formControlName="dateRangeFrom"
-                         [bsConfig]="{ containerClass: 'theme-default', showWeekNumbers: false }"
-                         [maxDate]="maxDate"
-                         placeholder="DD/MM/YYYY"
-                         bsDatepicker>
-                  <i (click)="df.toggle()" class="fa fa-calendar"></i>
-                </div>
-
-                <div class="rangeTo">
-                  <label>And</label>
-                  <input type="text"
-                         #dt="bsDatepicker"
-                         formControlName="dateRangeTo"
-                         [bsConfig]="{ containerClass: 'theme-default', showWeekNumbers: false }"
-                         [minDate]="dateRangeFromMinDate"
-                         [maxDate]="maxDate"
-                         placeholder="DD/MM/YYYY"
-                         bsDatepicker>
-                  <i (click)="dt.toggle()" class="fa fa-calendar"></i>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <input class="form-control" placeholder="Enter Keyword">
-              </div>
-            </div>
-
-            <div class="row">
+            <div class="row no-mb">
               <div class="col-md-12 filter-apply">
                 <button class="btn-default btn">{{ 'APPLY' | uppercase }}</button>
               </div>
@@ -134,15 +144,49 @@
         </div>
       </div>
 
+      <div class="data-set">
+        <table class="table table-striped">
+          <thead>
+            <th>Title
+              <i class="fa fa-sort"></i>
+            </th>
+            <th>Source Type
+              <i class="fa fa-sort"></i>
+            </th>
+            <th>Date
+              <i class="fa fa-sort"></i>
+            </th>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Lorem Ipsum</td>
+            <td>International</td>
+            <td>01/01/2016</td>
+          </tr>
+          <tr>
+            <td>Lorem Ipsum</td>
+            <td>International</td>
+            <td>01/01/2016</td>
+          </tr>
+          <tr>
+            <td>Lorem Ipsum</td>
+            <td>International</td>
+            <td>01/01/2016</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paginator">
+        <pagination [boundaryLinks]="true" [totalItems]="70" [maxSize]="10"
+                    firstText="&laquo;" lastText="&raquo;" itemsPerPage="25" [directionLinks]="false"
+                    (pageChanged)="pageChanged($event)"></pagination>
+      </div>
+
     </div>
 
-    <div class="col-md-2 col-md-offset-1 icons">
-      <div>
-        <img [src]="print">
-      </div>
-      <div>
-        <img [src]="share"> <span class="share">Share</span>
-      </div>
+    <div class="col-md-2 col-md-offset-1">
+
     </div>
   </div>
 

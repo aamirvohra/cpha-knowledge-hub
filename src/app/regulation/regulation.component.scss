@@ -24,6 +24,32 @@
       form {
         .row {
           margin-bottom: 20px;
+
+          .filter-title {
+            margin-bottom: 15px;
+          }
+
+          .filter-criteria {
+            > div[class^="col-"] {
+              padding: 0;
+            }
+          }
+        }
+
+        .filters > div:last-child {
+          @media (max-width: 991px) {
+            margin-top: 30px;
+          }
+        }
+
+        .date-range {
+          @media (max-width: 767px) {
+            margin-top: 30px;
+          }
+        }
+
+        .no-mb {
+          margin-bottom: 0;
         }
       }
     }
@@ -66,7 +92,7 @@
     }
   }
 
-  .sourceType-checkbox {
+  .sourcetype-checkbox {
     > div {
       padding: 0;
     }
@@ -112,5 +138,47 @@
 
   .filter-apply {
     text-align: right;
+  }
+
+  .data-set {
+    margin-top: 20px;
+
+    table {
+      thead {
+        th {
+          padding: 8px;
+        }
+      }
+
+      tr {
+        &:hover {
+          background-color: #666666;
+        }
+      }
+    }
+  }
+
+  .paginator {
+    text-align: center;
+
+
+    /deep/ .pagination {
+      margin: 10px 0;
+      font-size: 1rem;
+
+      li {
+
+        &.active {
+          a {
+            background-color: #ac142a;
+            color: white;
+          }
+        }
+
+        a {
+          color: black;
+        }
+      }
+    }
   }
 }

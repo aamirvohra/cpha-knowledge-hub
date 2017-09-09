@@ -56,4 +56,8 @@ export class RegulationComponent implements OnInit {
     });
   }
 
+  pageChanged(pageEvent) {
+    console.log('page changed');
+  }
+
 }
