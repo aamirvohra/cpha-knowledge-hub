@@ -1,0 +1,47 @@
+<div class="login-wrapper">
+  <div class="row no-margin">
+    <div class="col-md-9 col-sm-9 title no-padding">
+      <h1>Log In / Register</h1>
+    </div>
+
+    <div class="icons hidden-xs col-md-3 col-sm-3 no-padding">
+      <div>
+        <img [src]="print">
+      </div>
+      <div>
+        <img [src]="share"> <span class="share">Share</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-margin">
+    <div class="col-md-9 no-padding">
+      <div class="breadcrumbs">
+        <app-breadcrumbs></app-breadcrumbs>
+      </div>
+
+      <div class="login-content">
+        <h3 class="sub-title">Log in to your account</h3>
+
+        <div class="login-form-wrapper col-md-4 col-sm-6 no-padding">
+          <form [formGroup]="loginForm">
+            <input class="form-control" type="text" formControlName="userId" placeholder="Email or username">
+            <input class="form-control" type="text" formControlName="password" placeholder="Password">
+
+            <button class="btn btn-default" type="submit">Log in</button>
+          </form>
+
+          <div class="forgot">
+            Forgot <a>username or password</a>
+          </div>
+
+          <div class="signup">
+            Not Yet Registered? <a>Signup</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

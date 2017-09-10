@@ -1,6 +1,10 @@
 .regulation-wrapper {
   padding: 20px;
 
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
   .title {
     border-bottom: 1px solid #EEEEEE;
   }
@@ -118,6 +122,18 @@
           background-color: #666666;
         }
       }
+    }
+  }
+
+  .featured {
+    padding-right: 0;
+
+    @media (max-width: 991px) {
+
+    }
+
+    @media (max-width: 767px) {
+      padding: 0;
     }
   }
 }

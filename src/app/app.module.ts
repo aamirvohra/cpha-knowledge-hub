@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BsDatepickerModule, PaginationModule } from 'ngx-bootstrap';
 import { FeaturedContentComponent } from './featured-content/featured-content.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     BreadcrumbsComponent,
     FeaturedContentComponent,
     SearchResultsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

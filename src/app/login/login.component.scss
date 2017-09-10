@@ -1,0 +1,42 @@
+.login-wrapper{
+  padding: 20px;
+
+  .title {
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  .login-form-wrapper {
+    margin-bottom: 40px;
+
+    input {
+      border-radius: 0;
+      height: 40px;
+      margin-bottom: 14px;
+    }
+
+    button {
+      height: 40px;
+      width: 100px;
+      color: #7481a7;
+      text-transform: uppercase;
+      font-size: 1rem;
+      background-color: #efedef;
+    }
+
+    form, .forgot {
+      margin-bottom: 40px;
+    }
+  }
+
+  .login-content {
+    .sub-title {
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .signup {
+    font-size: 1.571rem;
+    color: black;
+  }
+}
