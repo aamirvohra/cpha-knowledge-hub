@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { RegulationComponent } from './regulation/regulation.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { LoginComponent } from './login/login.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const ROUTES: Routes = [
   {
@@ -24,6 +25,10 @@ const ROUTES: Routes = [
   {
     path: 'login-register',
     component: LoginComponent,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent,
   },
 
 ];

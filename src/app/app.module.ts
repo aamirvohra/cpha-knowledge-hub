@@ -15,6 +15,7 @@ import { BsDatepickerModule, PaginationModule } from 'ngx-bootstrap';
 import { FeaturedContentComponent } from './featured-content/featured-content.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { LoginComponent } from './login/login.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { LoginComponent } from './login/login.component';
     FeaturedContentComponent,
     SearchResultsComponent,
     LoginComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
