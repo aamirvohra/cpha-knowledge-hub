@@ -13,6 +13,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BsDatepickerModule, PaginationModule } from 'ngx-bootstrap';
 import { FeaturedContentComponent } from './featured-content/featured-content.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FeaturedContentComponent } from './featured-content/featured-content.co
     RegulationComponent,
     BreadcrumbsComponent,
     FeaturedContentComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,

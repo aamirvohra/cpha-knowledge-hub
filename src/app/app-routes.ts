@@ -5,6 +5,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RegulationComponent } from './regulation/regulation.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 const ROUTES: Routes = [
   {
@@ -15,6 +16,11 @@ const ROUTES: Routes = [
     path: 'regulation',
     component: RegulationComponent,
   },
+  {
+    path: 'search',
+    component: SearchResultsComponent,
+  },
+
 ];
 
 export const APP_ROUTES = RouterModule.forRoot(ROUTES);

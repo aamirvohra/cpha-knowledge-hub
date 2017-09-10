@@ -1,0 +1,45 @@
+.search-result-wrapper {
+  .title {
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  .results-list {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.071rem;
+  }
+
+  .sort {
+    text-align: right;
+    margin-top: 5px;
+    font-size: 1rem;
+
+    select {
+      padding: 5px 10px;
+    }
+  }
+
+  .list-result {
+    margin: 15px 0;
+    border-bottom: 1px solid #cacaca;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .result-title {
+      font-size: 1.429rem;
+    }
+
+    .sub-text {
+      margin-top: 10px;
+    }
+
+    .content-info {
+      margin-top: 10px;
+      margin-bottom: 25px;
+      font-size: 1rem;
+      color: #666666;
+    }
+  }
+}

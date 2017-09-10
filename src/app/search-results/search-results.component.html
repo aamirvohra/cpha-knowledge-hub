@@ -1,0 +1,58 @@
+<div class="search-result-wrapper">
+  <div class="row no-margin">
+    <div class="col-md-9 col-sm-9 title no-padding">
+      <h1>Search Results</h1>
+    </div>
+
+    <div class="icons hidden-xs col-md-3 col-sm-3 no-padding">
+      <div>
+        <img [src]="print">
+      </div>
+      <div>
+        <img [src]="share"> <span class="share">Share</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-margin">
+    <div class="col-md-9 no-padding">
+      <div class="breadcrumbs">
+        <app-breadcrumbs></app-breadcrumbs>
+      </div>
+
+      <div class="row overview">
+        <div class="results-list col-md-9">
+          <span>Found 58 results for "lorem ipsum"</span>
+        </div>
+
+        <div class="sort col-md-3">
+          <select>
+            <option>Relevance</option>
+            <option>Alphabetic</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 list-result" *ngFor="let list of searchResultList">
+          <a class="result-title">
+            {{list.title}}
+          </a>
+          <div class="sub-text">
+            {{list.subTitle}}
+          </div>
+
+          <div class="content-info">
+            {{ list.editor }} | {{ list.publisher }} | {{ list.publishedYear }}
+          </div>
+        </div>
+      </div>
+
+      <div class="paginator">
+        <pagination [boundaryLinks]="true" [totalItems]="70" [maxSize]="10"
+                    firstText="&laquo;" lastText="&raquo;" itemsPerPage="25" [directionLinks]="false"
+                    (pageChanged)="pageChanged($event)"></pagination>
+      </div>
+    </div>
+  </div>
+</div>

@@ -54,3 +54,64 @@ h4 {
 .no-margin {
   margin: 0;
 }
+
+.paginator {
+  text-align: center;
+
+
+  /deep/ .pagination {
+    margin: 10px 0;
+    font-size: 1rem;
+
+    li {
+
+      &.active {
+        a {
+          background-color: #ac142a;
+          color: white;
+        }
+      }
+
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+.icons {
+  padding-right: 0;
+  margin-top: 35px;
+  margin-bottom: 10px;
+
+  text-align: right;
+  text-transform: uppercase;
+
+  div {
+    display: inline-block;
+    border-right:1px solid #666666;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    &:first-child {
+      //padding-right: 5px;
+      //padding-left: 5px;
+    }
+
+    &:last-child {
+      border: none;
+      padding-right: 0;
+    }
+
+    .share {
+      font-size: 0.857rem;
+      line-height: 1.4rem;
+      display: inline-block;
+      vertical-align: text-top;
+      color: #505050;
+    }
+  }
+
+  img {
+  }
+}
