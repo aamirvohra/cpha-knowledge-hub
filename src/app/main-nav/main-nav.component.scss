@@ -94,6 +94,13 @@
     }
   }
 
+  .active {
+    span {
+      padding-bottom: 5px;
+      border-bottom: 2px solid white;
+    }
+  }
+
   //.top-nav-menu {
   //  position: absolute;
   //  top: 15px;

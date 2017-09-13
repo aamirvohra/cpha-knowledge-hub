@@ -2,34 +2,36 @@
   <div class="col-md-12 col-sm-12 col-xs-12 nav-bar" [ngClass]="isMenuOpen ? 'display-menu' : ''">
     <ul class="nav nav-pills" [ngClass]="isMenuOpen ? 'nav-stacked' : 'nav-justified'">
       <li>
-        <a>Regulation</a>
+        <a routerLinkActive="active" routerLink="/regulation">
+          <span>Regulation</span></a>
       </li>
       <li class="extra">
-        <a>Workforce and Education</a>
+        <a routerLinkActive="active">Workforce and Education</a>
       </li>
       <li>
-        <a>IMS Data</a>
+        <a routerLinkActive="active">IMS Data</a>
       </li>
       <li>
-        <a>Advocacy</a>
+        <a routerLinkActive="active">Advocacy</a>
       </li>
       <li>
-        <a>Pharmacy Remuneration</a>
+        <a routerLinkActive="active">Pharmacy Remuneration</a>
       </li>
       <li>
-        <a>Pharmacy Practice</a>
+        <a routerLinkActive="active">Pharmacy Practice</a>
       </li>
       <li>
-        <a>IT/Innovation</a>
+        <a routerLinkActive="active">IT/Innovation</a>
       </li>
-      <li class="mobile-addon first visible-sm">
-        <a>About Us</a>
+      <li class="mobile-addon first visible-sm visible-xs">
+        <a routerLinkActive="active">About Us</a>
       </li>
-      <li class="mobile-addon last visible-sm">
-        <a>Contact Us</a>
+      <li class="mobile-addon last visible-sm visible-xs">
+        <a routerLinkActive="active" routerLink="/contact-us">Contact Us</a>
       </li>
-      <li class="login visible-sm">
-        <a class="col-sm-offset-4 col-sm-4 col-xs-offset-4 col-xs-4">Log in / Register</a>
+      <li class="login visible-sm visible-xs">
+        <a class="col-sm-offset-4 col-sm-4 col-xs-8 col-xs-offset-2" routerLinkActive="active"
+           routerLink="/login-register">Log in / Register</a>
       </li>
     </ul>
   </div>

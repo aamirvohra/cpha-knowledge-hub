@@ -24,4 +24,18 @@
   .address, .contact {
     margin-bottom: 20px;
   }
+
+  .submission-how-to {
+    padding: 30px;
+    background-color: #efedef;
+
+    ul {
+      margin-top: 10px;
+      padding-left: 25px;
+
+      li {
+        padding-bottom: 5px;
+      }
+    }
+  }
 }
