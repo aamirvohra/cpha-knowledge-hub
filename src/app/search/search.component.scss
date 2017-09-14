@@ -37,4 +37,18 @@
       width: 75%;
     }
   }
+
+  input {
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .display {
+    display: block !important;
+
+    input {
+      display: block;
+    }
+  }
 }
