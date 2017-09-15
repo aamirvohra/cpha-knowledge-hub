@@ -10,23 +10,22 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class SearchComponent implements OnInit {
 
   public searchIcon: string = AppURLRepo.SEARCH_ICON;
-  public cancelCross: string = AppURLRepo.CLOSE;
+  public clearIcon: string = AppURLRepo.SMALL_CROSS;
 
   public searchForm: FormGroup;
-  public isSearchBarVisibleOnHandheldDevice: boolean;
+
 
   constructor(private fb: FormBuilder) {
     this.searchForm = this.fb.group({
       search: ['']
     });
-    this.isSearchBarVisibleOnHandheldDevice = false;
   }
 
   ngOnInit() {
   }
 
-  toggleSearch() {
-    this.isSearchBarVisibleOnHandheldDevice = !this.isSearchBarVisibleOnHandheldDevice;
+  clearSearch() {
+    this.searchForm.controls['search'].setValue(null);
   }
 
 }

@@ -15,9 +15,9 @@
     border: 1px solid #CCCCCC;
     height: 40px;
 
-    @media (max-width: 991px) {
-      display: none;
-    }
+    //@media (max-width: 991px) {
+    //  display: none;
+    //}
 
     ::-webkit-input-placeholder {
       color: #555555;
@@ -29,26 +29,22 @@
     top: 28px;
     right: 30px;
 
-    @media (max-width: 991px) {
-      position: static;
+    @media (max-width: 767px) {
+      //position: absolute;
+      //top: 28px;
+      //right: 30px;
     }
 
-    img {
-      width: 75%;
+    @media (max-width: 991px) {
+      //position: absolute;
+      //top: 28px;
+      //right: 30px;
     }
   }
 
-  input {
-    @media (max-width: 991px) {
-      display: none;
-    }
-  }
-
-  .display {
-    display: block !important;
-
-    input {
-      display: block;
-    }
+  .clear-icon {
+    position: absolute;
+    top: 34px;
+    right: 60px;
   }
 }

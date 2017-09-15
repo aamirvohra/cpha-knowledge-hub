@@ -8,11 +8,20 @@ import { AppURLRepo } from '../../utils/app-url-repo';
 })
 export class HeaderComponent implements OnInit {
 
+  public isSearchBarVisibleOnHandheldDevice: boolean;
+
   protected logo: string = AppURLRepo.KNOWLEDGE_HUB_LOGO;
+  public cancelCross: string = AppURLRepo.CLOSE;
+  public searchIcon: string = AppURLRepo.SEARCH_ICON;
 
-  constructor() { }
+  constructor() {
+    this.isSearchBarVisibleOnHandheldDevice = false;
+  }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  toggleSearch() {
+    this.isSearchBarVisibleOnHandheldDevice = !this.isSearchBarVisibleOnHandheldDevice;
   }
 
 }

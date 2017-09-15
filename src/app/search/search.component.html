@@ -1,9 +1,10 @@
 <div class="search-wrapper">
   <form [formGroup]="searchForm">
-    <div [ngClass]="isSearchBarVisibleOnHandheldDevice ? 'display' : ''" class="form-group">
+    <div class="form-group">
       <input placeholder="What are you looking for?"
              type="text" class="form-control" formControlName="search">
+      <img class="search-icon" [src]="searchIcon">
+      <img (click)="clearSearch()" *ngIf="searchForm.controls['search'].value" class="clear-icon" [src]="clearIcon">
     </div>
-    <img (click)="toggleSearch()" class="search-icon" [src]="isSearchBarVisibleOnHandheldDevice ? cancelCross : searchIcon">
   </form>
 </div>
