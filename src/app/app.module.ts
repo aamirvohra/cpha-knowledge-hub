@@ -16,6 +16,7 @@ import { FeaturedContentComponent } from './featured-content/featured-content.co
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { LoginComponent } from './login/login.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { NavbarHoverDirective } from './navbar-hover.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     SearchResultsComponent,
     LoginComponent,
     ContactUsComponent,
+    NavbarHoverDirective,
   ],
   imports: [
     BrowserModule,

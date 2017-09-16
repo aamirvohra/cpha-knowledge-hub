@@ -1,37 +1,70 @@
 <div class="main-nav-wrapper">
   <div class="col-md-12 col-sm-12 col-xs-12 nav-bar" [ngClass]="isMenuOpen ? 'display-menu' : ''">
     <ul class="nav nav-pills" [ngClass]="isMenuOpen ? 'nav-stacked' : 'nav-justified'">
-      <li>
+      <li appNavbarHover>
         <a routerLinkActive="active" routerLink="/regulation">
-          <span>Regulation</span></a>
+          <span>Practice Advancement</span></a>
+
+        <ul class="sub-nav nav nav-pills">
+          <li>
+            <a>
+              <span>IT/Innovation</span>
+            </a>
+          </li>
+        </ul>
       </li>
-      <li class="extra">
-        <a routerLinkActive="active">Workforce and Education</a>
+      <li appNavbarHover>
+        <a routerLinkActive="active">
+          <span>Workforce</span>
+        </a>
       </li>
-      <li>
-        <a routerLinkActive="active">IMS Data</a>
+      <li appNavbarHover>
+        <a routerLinkActive="active">
+          <span>Practice Research</span>
+        </a>
       </li>
-      <li>
-        <a routerLinkActive="active">Advocacy</a>
+      <li appNavbarHover>
+        <a routerLinkActive="active">
+          <span>Practice Development</span>
+        </a>
+        <ul class="sub-nav nav nav-pills">
+          <li>
+            <a>
+              <span>CPD</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span>Practice Tools</span>
+            </a>
+          </li>
+        </ul>
       </li>
-      <li>
-        <a routerLinkActive="active">Pharmacy Remuneration</a>
+      <li class="extra" appNavbarHover>
+        <a routerLinkActive="active">
+          <span>Health and Pharmacy Economics</span>
+        </a>
       </li>
-      <li>
-        <a routerLinkActive="active">Pharmacy Practice</a>
+      <li class="extra" appNavbarHover>
+        <a routerLinkActive="active">
+          <span>Health Policy and Regulation</span>
+        </a>
       </li>
-      <li>
-        <a routerLinkActive="active">IT/Innovation</a>
+      <li class="mobile-addon first visible-sm visible-xs" appNavbarHover>
+        <a routerLinkActive="active">
+          <span>About Us</span>
+        </a>
       </li>
-      <li class="mobile-addon first visible-sm visible-xs">
-        <a routerLinkActive="active">About Us</a>
+      <li class="mobile-addon last visible-sm visible-xs" appNavbarHover>
+        <a routerLinkActive="active" routerLink="/contact-us">
+          <span>Contact Us</span>
+        </a>
       </li>
-      <li class="mobile-addon last visible-sm visible-xs">
-        <a routerLinkActive="active" routerLink="/contact-us">Contact Us</a>
-      </li>
-      <li class="login visible-sm visible-xs">
+      <li class="login visible-sm visible-xs" appNavbarHover>
         <a class="col-sm-offset-4 col-sm-4 col-xs-8 col-xs-offset-2" routerLinkActive="active"
-           routerLink="/login-register">Log in / Register</a>
+           routerLink="/login-register">
+          <span>Log in / Register</span>
+        </a>
       </li>
     </ul>
   </div>

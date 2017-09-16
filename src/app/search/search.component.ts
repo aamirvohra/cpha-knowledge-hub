@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppURLRepo } from '../../utils/app-url-repo';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -15,7 +16,7 @@ export class SearchComponent implements OnInit {
   public searchForm: FormGroup;
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.searchForm = this.fb.group({
       search: ['']
     });
@@ -26,6 +27,10 @@ export class SearchComponent implements OnInit {
 
   clearSearch() {
     this.searchForm.controls['search'].setValue(null);
+  }
+
+  search() {
+    this.router.navigate(['/search']);
   }
 
 }

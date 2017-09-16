@@ -51,6 +51,46 @@
           }
         }
 
+        &.display {
+
+          .sub-nav {
+            display: block;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: white;
+            // padding: 10px 20px;
+            z-index: 10;
+            width: 100%;
+            border: 1px solid black;
+
+            li {
+              padding: 10px;
+              width: 100%;
+              // border-bottom: 1px solid #CCCCCC;
+
+              //&:last-child {
+              //  border-bottom: none;
+              //}
+
+              //&:hover {
+              //  background-color: grey;
+              //}
+
+              a {
+                color: black;
+                text-align: center;
+                padding: 0;
+                background-color: inherit;
+              }
+            }
+          }
+        }
+
+        .sub-nav {
+          display: none;
+        }
+
         a {
           padding: 15px;
           background-color: #555555;
