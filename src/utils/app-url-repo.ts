@@ -30,4 +30,6 @@ export class AppURLRepo {
 
   public static readonly SHARE: string = AppURLRepo.IMG_URL + '/' + 'share-icon.png';
 
+  public static readonly DOWN: string = AppURLRepo.IMG_URL + '/' + 'down-icon.png';
+
 }

@@ -1,32 +1,38 @@
 <div class="main-nav-wrapper">
   <div class="col-md-12 col-sm-12 col-xs-12 nav-bar" [ngClass]="isMenuOpen ? 'display-menu' : ''">
     <ul class="nav nav-pills" [ngClass]="isMenuOpen ? 'nav-stacked' : 'nav-justified'">
-      <li appNavbarHover>
+      <li #practiceDevelopment appNavbarHover>
         <a routerLinkActive="active" routerLink="/regulation">
-          <span>Practice Advancement</span></a>
+          <span>Practice Advancement</span>
+        </a>
+
+        <i (click)="toggleSubMenu(practiceDevelopment)" class="fa fa-arrow-down arrow"></i>
 
         <ul class="sub-nav nav nav-pills">
           <li>
-            <a>
+            <a class="nav-links">
               <span>IT/Innovation</span>
             </a>
           </li>
         </ul>
       </li>
-      <li appNavbarHover>
+      <li>
         <a routerLinkActive="active">
           <span>Workforce</span>
         </a>
       </li>
-      <li appNavbarHover>
+      <li>
         <a routerLinkActive="active">
           <span>Practice Research</span>
         </a>
       </li>
-      <li appNavbarHover>
+      <li #practiceAdvancement appNavbarHover>
         <a routerLinkActive="active">
           <span>Practice Development</span>
         </a>
+
+        <i (click)="toggleSubMenu(practiceAdvancement)" class="fa fa-arrow-down arrow"></i>
+
         <ul class="sub-nav nav nav-pills">
           <li>
             <a>
@@ -40,27 +46,27 @@
           </li>
         </ul>
       </li>
-      <li class="extra" appNavbarHover>
+      <li class="extra">
         <a routerLinkActive="active">
           <span>Health and Pharmacy Economics</span>
         </a>
       </li>
-      <li class="extra" appNavbarHover>
+      <li class="extra">
         <a routerLinkActive="active">
           <span>Health Policy and Regulation</span>
         </a>
       </li>
-      <li class="mobile-addon first visible-sm visible-xs" appNavbarHover>
+      <li class="mobile-addon first visible-sm visible-xs">
         <a routerLinkActive="active">
           <span>About Us</span>
         </a>
       </li>
-      <li class="mobile-addon last visible-sm visible-xs" appNavbarHover>
+      <li class="mobile-addon last visible-sm visible-xs">
         <a routerLinkActive="active" routerLink="/contact-us">
           <span>Contact Us</span>
         </a>
       </li>
-      <li class="login visible-sm visible-xs" appNavbarHover>
+      <li class="login visible-sm visible-xs">
         <a class="col-sm-offset-4 col-sm-4 col-xs-8 col-xs-offset-2" routerLinkActive="active"
            routerLink="/login-register">
           <span>Log in / Register</span>
