@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div [ngClass]="stacked ? 'clearfix visible-md-block' : 'hidden-lg'"> </div>
+  <!--<div [ngClass]="stacked ? 'clearfix visible-md-block' : 'hidden-lg'"> </div>-->
 
   <div [ngClass]="stacked ? 'col-md-12 col-sm-4 no-padding' : 'col-md-4 col-sm-4 col-xs-12'">
     <div class="featured-content">
@@ -27,15 +27,35 @@
     </div>
   </div>
   <div [ngClass]="stacked ? 'col-md-12 col-sm-4 no-padding' : 'col-md-4 col-sm-4 col-xs-12'">
-    <div class="featured-content">
-      <img class="featured-img img-responsive" [src]="featuredIcon">
+    <div class="featured-text-content">
+      <ul>
+        <li>
+          <div>
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span>
+              <a>Most recent submissions</a>
+            </span>
+          </div>
+        </li>
 
-      <div class="featured-text">
-        <a>
-          <img [src]="downloadIcon">
-          &nbsp; Test Downloads
-        </a>
-      </div>
+        <li>
+          <div>
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span>
+              <a>How to submit a document</a>
+            </span>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span>
+              <a routerLink="/contact-us">Contact us</a>
+            </span>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
