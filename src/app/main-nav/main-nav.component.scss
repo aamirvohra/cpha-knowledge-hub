@@ -108,6 +108,7 @@
           background-color: #555555;
           color: white;
           text-align: center;
+          border-radius: 0;
         }
 
         &.mobile-addon {
@@ -152,17 +153,4 @@
       border-bottom: 2px solid white;
     }
   }
-
-  //.top-nav-menu {
-  //  position: absolute;
-  //  top: 15px;
-  //  right: 20px;
-  //  font-size: 1rem;
-  //
-  //  .nav {
-  //    li {
-  //
-  //    }
-  //  }
-  //}
 }

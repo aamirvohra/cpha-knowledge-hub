@@ -1,8 +1,10 @@
 .search-wrapper {
   margin: 20px 0;
+  padding-right: 5px;
 
   @media (max-width: 991px) {
     margin: 10px 5px;
+    padding-right: 0;
   }
 
   .form-group {
@@ -13,14 +15,14 @@
 
   input{
     border: 1px solid #CCCCCC;
-    height: 40px;
+    height: 44px;
 
-    //@media (max-width: 991px) {
-    //  display: none;
-    //}
-
-    ::-webkit-input-placeholder {
-      color: #555555;
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      color: #999999;
+      font-size: 1.286rem;
     }
   }
 

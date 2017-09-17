@@ -75,10 +75,10 @@
     </ul>
   </div>
 
-  <div *ngIf="!isMenuOpen" (click)="toggleMenu()" class="menu-icon visible-sm visible-xs">
+  <div *ngIf="!isMenuOpen" (click)="toggleMenu($event)" class="menu-icon visible-sm visible-xs">
     <img [src]="menuIcon">
   </div>
-  <div *ngIf="isMenuOpen" (click)="toggleMenu()" class="menu-icon-close visible-sm visible-xs">
+  <div *ngIf="isMenuOpen" (click)="toggleMenu($event)" class="menu-icon-close visible-sm visible-xs">
     <img [src]="close">
   </div>
 </div>

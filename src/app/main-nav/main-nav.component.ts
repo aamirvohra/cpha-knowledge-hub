@@ -24,8 +24,10 @@ export class MainNavComponent {
     this.isMenuOpen = false;
   }
 
-  public toggleMenu() {
+  public toggleMenu(event) {
+    console.log('toggle');
     this.isMenuOpen = !this.isMenuOpen;
+    event.stopPropagation();
   }
 
   public toggleSubMenu(el: HTMLElement) {
@@ -36,15 +38,13 @@ export class MainNavComponent {
     }
   }
 
-  // @HostListener('document:click', ['$event'])
-  // public onClick(event) {
-  //   console.log(event.target.parentNode.parentNode);
-  //   console.log(event.currentTarget);
-  //   // if (event.target.classList.contains('nav-links')) {
-  //     this.practiceDevelopment.nativeElement.classList.remove('display');
-  //     this.practiceAdvancement.nativeElement.classList.remove('display');
-  //   // }
-  // }
+  @HostListener('document:click', ['$event'])
+  public onClick(event) {
+    if (event.target && event.target.classList && !event.target.classList.contains('arrow')) {
+      this.isMenuOpen = this.isMenuOpen ? !this.isMenuOpen : this.isMenuOpen;
+    }
+
+  }
 
 
 }
