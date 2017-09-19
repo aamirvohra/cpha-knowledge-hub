@@ -22,7 +22,7 @@
 
       <div class="row overview">
         <div class="results-list col-md-9 col-sm-9">
-          <span>Found 58 results for "lorem ipsum"</span>
+          <span>Found 8 results for "Cannabis"</span>
         </div>
 
         <div class="sort col-md-3 col-sm-3">
@@ -38,18 +38,20 @@
           <a class="result-title">
             {{list.title}}
           </a>
-          <div class="sub-text">
+          <div *ngIf="list.subTitle" class="sub-text">
             {{list.subTitle}}
           </div>
 
           <div class="content-info">
-            {{ list.editor }} | {{ list.publisher }} | {{ list.publishedYear }}
+            <span *ngIf="list.editor"> {{ list.editor }} | </span>
+            <span *ngIf="list.publisher"> {{ list.publisher }} | </span>
+            <span *ngIf="list.publishedYear"> {{ list.publishedYear }} </span>
           </div>
         </div>
       </div>
 
       <div class="paginator">
-        <pagination [boundaryLinks]="true" [totalItems]="70" [maxSize]="10"
+        <pagination [boundaryLinks]="true" [totalItems]="8" [maxSize]="10"
                     firstText="&laquo;" lastText="&raquo;" itemsPerPage="25" [directionLinks]="false"
                     (pageChanged)="pageChanged($event)"></pagination>
       </div>

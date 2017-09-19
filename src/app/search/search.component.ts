@@ -30,6 +30,7 @@ export class SearchComponent implements OnInit {
   }
 
   search() {
+    this.searchForm.controls['search'].setValue('cannabis');
     this.router.navigate(['/search']);
   }
 
