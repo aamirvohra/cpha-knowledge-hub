@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppURLRepo } from '../../utils/app-url-repo';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import fakeData from '../../regulation.json';
 
 @Component({
   selector: 'app-regulation',
@@ -20,6 +21,8 @@ export class RegulationComponent implements OnInit {
 
   public smallCross: string = AppURLRepo.SMALL_CROSS;
 
+  public fakeData: any;
+
   constructor(private fb: FormBuilder) {
     this.filterForm = this.fb.group({
       sourceType: this.getSourceType(),
@@ -31,6 +34,8 @@ export class RegulationComponent implements OnInit {
     this.maxDate = new Date();
 
     this.displayFilterForm = false;
+
+    this.fakeData = fakeData;
   }
 
   ngOnInit() {

@@ -56,13 +56,16 @@
   }
 
   .feed {
-    position: absolute;
-    right: 35px;
+    float: right;
 
     @media (max-width: 991px) {
       margin-top: 20px;
       position: static;
     }
+  }
+
+  .featured-content {
+    clear: both;
   }
 
   .document-news-feed {

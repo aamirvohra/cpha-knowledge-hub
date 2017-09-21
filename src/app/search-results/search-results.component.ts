@@ -23,26 +23,15 @@ export class SearchResultsComponent implements OnInit {
   public getResultList() {
     this.searchResultList = [];
 
-    // for (let i = 0; i < 10; i++) {
-    //   const obj: any = {};
-    //   obj.title = '...Sed ex lacus, rhoncus vitae vehicula vel, dictum eget quam. Cras eu ullamcorper ante, pellentesque congue mauris. Integer eu erat consequat, tristique ante nec, vulputate ligula. Duis urna massa, elementum non pharetra non, varius eget sapien.';
-    //   obj.subTitle = 'Nulla mattis felis a eleifend egestas. Maecenas ullamcorper feugiat egestas. Nam et neque enim. Quisque nec ultrices mi. Vestibulum ut euismod leo. Fusce vitae urna erat. Suspendisse eget urna ipsum. Maecenas vitae turpis eros.';
-    //   obj.editor = 'Jane Doe';
-    //   obj.publisher = 'Neilson Canada';
-    //   obj.publishedYear = '2017';
-    //
-    //   this.searchResultList.push(obj);
-    // }
-
-    const obj: any = {};
-    obj.title = 'Medical Cannabis Q&A';
-    obj.publisher = 'Canadian Pharmacists Association';
-    obj.publishedYear = 'August 2017';
-
     const obj1: any = {};
-    obj1.title = 'Cannabis Legalization: Focusing on Patient Needs';
-    obj1.publisher = 'The Arthritis Society';
-    obj1.publishedYear = 'May 2016';
+    obj1.title = 'Medical Cannabis Q&A';
+    obj1.publisher = 'Canadian Pharmacists Association';
+    obj1.publishedYear = 'August 2017';
+
+    const obj2: any = {};
+    obj2.title = 'Cannabis Legalization: Focusing on Patient Needs';
+    obj2.publisher = 'The Arthritis Society';
+    obj2.publishedYear = 'May 2016';
 
     const obj3: any = {};
     obj3.title = 'Therapeutic Use Of Cannabis - Position Statement';
@@ -77,7 +66,7 @@ export class SearchResultsComponent implements OnInit {
     obj8.publisher = 'IMS Brogan';
     obj8.publishedYear = 'November 2015';
 
-    this.searchResultList.push(obj1, obj3, obj4, obj5, obj6, obj7, obj8);
+    this.searchResultList.push(obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8);
 
   }
 

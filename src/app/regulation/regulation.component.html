@@ -144,7 +144,7 @@
         </div>
       </div>
 
-      <div class="data-set">
+      <div class="data-set table-responsive">
         <table class="table table-striped">
           <thead>
             <th>Title
@@ -158,27 +158,17 @@
             </th>
           </thead>
           <tbody>
-          <tr>
-            <td>Lorem Ipsum</td>
-            <td>International</td>
-            <td>01/01/2016</td>
-          </tr>
-          <tr>
-            <td>Lorem Ipsum</td>
-            <td>International</td>
-            <td>01/01/2016</td>
-          </tr>
-          <tr>
-            <td>Lorem Ipsum</td>
-            <td>International</td>
-            <td>01/01/2016</td>
+          <tr *ngFor="let data of fakeData">
+            <td>{{ data.title }}</td>
+            <td>{{ data.sourceType }}</td>
+            <td>{{ data.date }}</td>
           </tr>
           </tbody>
         </table>
       </div>
 
       <div class="paginator">
-        <pagination [boundaryLinks]="true" [totalItems]="70" [maxSize]="10"
+        <pagination [boundaryLinks]="true" [totalItems]="27" [maxSize]="30"
                     firstText="&laquo;" lastText="&raquo;" itemsPerPage="25" [directionLinks]="false"
                     (pageChanged)="pageChanged($event)"></pagination>
       </div>
