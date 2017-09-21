@@ -28,8 +28,16 @@
 
   .search-icon {
     position: absolute;
-    top: 28px;
+    top: 37px;
     right: 30px;
+
+    @media (max-width: 991px) {
+      top: 30px;
+    }
+
+    @media (max-width: 767px) {
+      top: 28px;
+    }
   }
 
   .clear-icon {

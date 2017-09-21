@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   public searchIcon: string = AppURLRepo.SEARCH_ICON;
 
   constructor() {
-    this.isSearchBarVisibleOnHandheldDevice = false;
+    this.isSearchBarVisibleOnHandheldDevice = true;
   }
 
   ngOnInit() {}

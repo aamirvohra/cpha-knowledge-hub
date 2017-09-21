@@ -25,7 +25,6 @@ export class MainNavComponent {
   }
 
   public toggleMenu(event) {
-    console.log('toggle');
     this.isMenuOpen = !this.isMenuOpen;
     event.stopPropagation();
   }
