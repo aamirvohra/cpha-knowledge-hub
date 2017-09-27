@@ -11,8 +11,8 @@
 
   .overview {
     .overview-title {
-      font-family: "Times New Roman";
-      font-size: 1.571rem;
+      // font-family: "Times New Roman";
+      font-size: 1.2rem;
       color: #000000;
       font-weight: normal;
     }
@@ -30,6 +30,10 @@
     padding: 30px;
     background-color: #efedef;
 
+    .title {
+      margin-top: 0;
+    }
+
     @media (max-width: 991px) {
       margin-top: 15px;
       margin-bottom: 15px;
@@ -45,9 +49,35 @@
     }
   }
 
-  .featured {
-    @media (max-width: 991px) {
+  form {
+    margin-top: 25px;
+  }
+
+  .form-group {
+    margin: 10px 0;
+
+    .control-label {
       padding: 0;
     }
+  }
+
+  .submit {
+    margin-top: 25px;
+    text-align: center;
+
+    button {
+      padding: 5px 40px;
+      text-align: center;
+
+      &:disabled {
+        background-color: #999999;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .required-indicator {
+    font-weight: bold;
+    color: #ac142a;
   }
 }

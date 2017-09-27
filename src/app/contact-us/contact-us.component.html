@@ -22,8 +22,8 @@
 
       <div class="overview">
         <div class="overview-title">
-            Lorem ipsum dolor sir amer, consectetur adipiscing elit. Sed auctor dui vitae diam dictum utricies.
-            Pellentesque sed mattis elit, et consectetur lorem.
+          The CPhA Knowledge Hub is managed and maintained by the Canadian Pharmacists Association (CPhA). For technical support and product feedback contact us by selecting one of the following methods.
+          Customer Service: Weekdays, 8:30 am to 4:30 pm ET (excluding statutory holidays). Website communications, email and voicemail sent outside the hours of operation will be reviewed the next business day.
         </div>
       </div>
 
@@ -64,24 +64,112 @@
       <div class="col-md-6 col-md-offset-1 col-sm-12 no-padding submission-how-to">
         <h2 class="title">How to make a submission</h2>
         <div class="sub-text">
-          Lorem ipsum dolor sir amer, consectetur adipiscing elit. Sed auctor
-          dui vitae diam dictum utricies. Pellentesque sed mattis elit, et consectetur lorem.
+          <p>Interested in submitting a document for inclusion in the CPhA Knowledge Hub?</p>
 
-          <ul>
-            <li>Lorem</li>
-            <li>Ipsum</li>
-            <li>Dolor</li>
-            <li>Sit Amet</li>
-            <li>Metsum</li>
-          </ul>
+          <p>Please include the following information along with the document.  We will review it and get back to you.</p>
+
+          <p class="required-indicator">All fields are required.</p>
+
+          <form [formGroup]="submissionForm">
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="name">Your Name:</label>
+
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="name" formControlName="name">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="email">Your Email:</label>
+
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="email" formControlName="email">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="documentTitle">Document Title:</label>
+
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="documentTitle" formControlName="documentTitle">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="email">Description</label>
+
+              <div class="col-md-9">
+                <textarea class="form-control" formControlName="documentDescription"></textarea>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="email">Date Published</label>
+
+              <div class="col-md-9">
+                <input class="form-control" type="text"
+                       #df="bsDatepicker"
+                       formControlName="datePublished"
+                       [bsConfig]="{ containerClass: 'theme-default', showWeekNumbers: false }"
+                       placeholder="YYYY/MM/DD"
+                       bsDatepicker>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="category">Category:</label>
+
+              <div class="col-md-9">
+                <select class="form-control" id="category" formControlName="category">
+                  <option value="null">None</option>
+                  <option value="Practice Advancement">Practice Advancement</option>
+                  <option value="Pharmacy Workforce">Pharmacy Workforce</option>
+                  <option value="Practise Research">Practise Research</option>
+                  <option value="Practise Development">Practise Development</option>
+                  <option value="Health & Pharmacy Economics">Health & Pharmacy Economics</option>
+                  <option value="Health Policy and Regulation">Health Policy and Regulation</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="sourceType">Source Type:</label>
+
+              <div class="col-md-9">
+                <select class="form-control" id="sourceType" formControlName="sourceType">
+                  <option value="null">None</option>
+                  <option value="national">National</option>
+                  <option value="provincial">Provincial</option>
+                  <option value="interNational">International</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="keywords">Keywords:</label>
+
+              <div class="col-md-9">
+                <input type="text" class="form-control" id="keywords" formControlName="keywords">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <label class="col-md-3 control-label" for="fileupload">Upload File:</label>
+
+              <div class="col-md-6">
+                <input type="file" id="fileupload" formControlName="uploadFile">
+              </div>
+            </div>
+
+            <div class="submit row">
+              <div class="col-md-offset-3 col-md-6">
+                <button [disabled]="submissionForm.invalid || submissionForm.pristine" (click)="onFormSubmit()" class="btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
-
-    <div class="clearfix visible-sm-block"></div>
-
-    <div class="col-md-3 featured">
-      <app-featured-content [stacked]="true"></app-featured-content>
     </div>
   </div>
 </div>
