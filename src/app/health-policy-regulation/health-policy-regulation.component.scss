@@ -1,0 +1,139 @@
+.health-policy-regulation-wrapper {
+  padding: 20px;
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
+  .title {
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  .overview {
+    margin-top: 30px;
+
+    .overview-subtitle {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .filters {
+
+    .filter-form-wrapper {
+      padding: 15px;
+      background-color: #EEEEEE;
+      border: 1px solid gray;
+
+      form {
+        .row {
+          margin-bottom: 20px;
+
+          .filter-title {
+            margin-bottom: 15px;
+          }
+
+          .filter-criteria {
+            > div[class^="col-"] {
+              padding: 0;
+            }
+          }
+        }
+
+        .filters > div:last-child {
+          @media (max-width: 991px) {
+            margin-top: 30px;
+          }
+        }
+
+        .date-range {
+          @media (max-width: 767px) {
+            margin-top: 30px;
+          }
+        }
+
+        .no-mb {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .sourcetype-checkbox {
+    > div {
+      padding: 0;
+    }
+
+    label {
+      font-weight: normal;
+    }
+
+    input {
+      margin-right: 5px;
+    }
+  }
+
+  .rangeFrom,
+  .rangeTo {
+    label {
+      width: 50px;
+      text-align: right;
+      font-weight: normal;
+      margin-right: 10px;
+    }
+  }
+
+  .close-button {
+    cursor: pointer;
+
+    img {
+      float: right;
+    }
+  }
+
+  .btn {
+    border-radius: 0;
+    color: #628abd;
+    border: 2px solid;
+    border-color: #cbcbcb;
+    padding: 5px 20px;
+  }
+
+  .btn:hover {
+    background-color: #FFFFFF;
+  }
+
+  .filter-apply {
+    text-align: right;
+  }
+
+  .data-set {
+    margin-top: 20px;
+
+    table {
+      thead {
+        th {
+          padding: 8px;
+        }
+      }
+
+      tr {
+        &:hover {
+          background-color: #e6e7e8;
+        }
+      }
+    }
+  }
+
+  .featured {
+    padding-right: 0;
+
+    @media (max-width: 991px) {
+      padding: 0;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+}

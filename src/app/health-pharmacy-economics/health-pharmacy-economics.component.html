@@ -1,0 +1,181 @@
+<div class="health-pharmacy-economics-wrapper">
+  <div class="row no-margin">
+    <div class="col-md-9 col-sm-9 title no-padding">
+      <h1>Health Pharmacy Economics</h1>
+    </div>
+
+    <div class="icons hidden-xs col-md-3 col-sm-3 no-padding">
+      <div>
+        <img [src]="print">
+      </div>
+      <div>
+        <img [src]="share"> <span class="share">Share</span>
+      </div>
+    </div>
+  </div>
+  <div class="row no-margin">
+    <div class="col-md-9 no-padding">
+      <div class="breadcrumbs">
+        <app-breadcrumbs></app-breadcrumbs>
+      </div>
+
+      <div class="overview">
+        <div class="overview-title">
+          <h2>
+            This category contains documents on the economics of pharmacy and related healthcare topics
+          </h2>
+        </div>
+
+        <div class="overview-subtitle">
+          <span>
+            Browse through the sortable list or use the filter to narrow your scope.
+          </span>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div *ngIf="!displayFilterForm" (click)="toggleFilter()" class="filter-toggle">
+          <button class="btn btn-default" type="submit">{{ 'filters' | uppercase }}</button>
+        </div>
+
+        <div [hidden]="!displayFilterForm" class="filter-form-wrapper">
+          <form [formGroup]="filterForm">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 col-xs-8">
+                FILTERS
+              </div>
+
+              <div (click)="toggleFilter()" class="col-md-2 col-md-offset-6 col-sm-2 col-sm-offset-4 col-xs-2 col-xs-offset-2 close-button">
+                <img class="img-responsive" [src]="smallCross">
+              </div>
+            </div>
+            <div class="row filters">
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="filter-title">Source Type</div>
+                <div  class="filter-criteria sourcetype-checkbox" formGroupName="sourceType">
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="all" value="true">All
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="international" value="true">International
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="national" value="true">National
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="provincial" value="true">Provincial
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="background" value="true">Background
+                    </label>
+                  </div>
+
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <label>
+                      <input type="checkbox" formControlName="policy" value="true">Policy
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="clearfix visible-xs-block"></div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12 date-range">
+                <div class="filter-title">Date Range</div>
+                <div class="filter-criteria">
+                  <div class="rangeFrom">
+                    <label>Between</label>
+                    <input type="text"
+                           #df="bsDatepicker"
+                           formControlName="dateRangeFrom"
+                           [bsConfig]="{ containerClass: 'theme-default', showWeekNumbers: false }"
+                           [maxDate]="maxDate"
+                           placeholder="DD/MM/YYYY"
+                           bsDatepicker>
+                    <i (click)="df.toggle()" class="fa fa-calendar"></i>
+                  </div>
+
+                  <div class="rangeTo">
+                    <label>And</label>
+                    <input type="text"
+                           #dt="bsDatepicker"
+                           formControlName="dateRangeTo"
+                           [bsConfig]="{ containerClass: 'theme-default', showWeekNumbers: false }"
+                           [minDate]="dateRangeFromMinDate"
+                           [maxDate]="maxDate"
+                           placeholder="DD/MM/YYYY"
+                           bsDatepicker>
+                    <i (click)="dt.toggle()" class="fa fa-calendar"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="clearfix visible-sm-block"></div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="filter-title">Title</div>
+                <div class="filter-criteria">
+                  <input class="form-control" placeholder="Enter Keyword">
+                </div>
+              </div>
+            </div>
+            <div class="row no-mb">
+              <div class="col-md-12 filter-apply">
+                <button class="btn-default btn">{{ 'APPLY' | uppercase }}</button>
+              </div>
+            </div>
+            <div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="data-set table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <th>Title
+            <i class="fa fa-sort"></i>
+          </th>
+          <th>Source Type
+            <i class="fa fa-sort"></i>
+          </th>
+          <th>Date
+            <i class="fa fa-sort"></i>
+          </th>
+          </thead>
+          <tbody>
+          <tr *ngFor="let data of fakeData">
+            <td>{{ data.title }}</td>
+            <td>{{ data.sourceType }}</td>
+            <td>{{ data.date }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paginator">
+        <pagination [boundaryLinks]="true" [totalItems]="27" [maxSize]="30"
+                    firstText="&laquo;" lastText="&raquo;" itemsPerPage="25" [directionLinks]="false"
+                    (pageChanged)="pageChanged($event)"></pagination>
+      </div>
+    </div>
+
+    <div class="col-md-3 featured">
+      <app-featured-content [stacked]="true"></app-featured-content>
+    </div>
+  </div>
+
+</div>

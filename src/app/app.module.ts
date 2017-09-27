@@ -17,6 +17,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { LoginComponent } from './login/login.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NavbarHoverDirective } from './navbar-hover.directive';
+import { HealthPharmacyEconomicsComponent } from './health-pharmacy-economics/health-pharmacy-economics.component';
+import { HealthPolicyRegulationComponent } from './health-policy-regulation/health-policy-regulation.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { NavbarHoverDirective } from './navbar-hover.directive';
     LoginComponent,
     ContactUsComponent,
     NavbarHoverDirective,
+    HealthPharmacyEconomicsComponent,
+    HealthPolicyRegulationComponent,
   ],
   imports: [
     BrowserModule,

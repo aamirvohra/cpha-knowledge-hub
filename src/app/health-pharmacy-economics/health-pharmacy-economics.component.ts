@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { AppURLRepo } from '../../utils/app-url-repo';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { AppURLRepo } from '../../utils/app-url-repo';
 import fakeData from '../../regulation.json';
 
 @Component({
-  selector: 'app-regulation',
-  templateUrl: './regulation.component.html',
-  styleUrls: ['./regulation.component.scss']
+  selector: 'app-health-pharmacy-economics',
+  templateUrl: './health-pharmacy-economics.component.html',
+  styleUrls: ['./health-pharmacy-economics.component.scss']
 })
-export class RegulationComponent implements OnInit {
+export class HealthPharmacyEconomicsComponent implements OnInit {
 
   public print: string  =  AppURLRepo.PRINT;
   public share: string  = AppURLRepo.SHARE;
@@ -35,7 +35,7 @@ export class RegulationComponent implements OnInit {
 
     this.displayFilterForm = false;
 
-    this.fakeData = null;
+    this.fakeData = fakeData.healthPharmacyEconomics;
   }
 
   ngOnInit() {
