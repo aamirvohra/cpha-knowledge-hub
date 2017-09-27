@@ -54,6 +54,12 @@
       .featured-text {
         margin-top: 20px;
         text-align: left;
+
+        a {
+          span {
+            padding-left: 10px;
+          }
+        }
       }
     }
 

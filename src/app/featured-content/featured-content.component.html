@@ -6,7 +6,8 @@
       <div class="featured-text">
         <a>
           <img [src]="downloadIcon">
-          &nbsp; Test Downloads
+          <span>Biologics: Challenges and...</span>
+          <!-- Biologics: Challenges and Opportunities for Community Pharmacists -->
         </a>
       </div>
     </div>
@@ -20,13 +21,27 @@
 
       <div class="featured-text">
         <a>
-          <img [src]="downloadIcon">
-          &nbsp; Test Downloads
+          <img [src]="downloadIcon" >
+          <span>The Price of Public Health...</span>
         </a>
       </div>
     </div>
   </div>
+
   <div [ngClass]="stacked ? 'col-md-12 col-sm-4 no-padding' : 'col-md-4 col-sm-4 col-xs-12'">
+    <div class="featured-content">
+      <img class="featured-img img-responsive" [src]="featuredIcon">
+
+      <div class="featured-text">
+        <a>
+          <img [src]="downloadIcon">
+          <span>Medical Cannabis Q&A</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div [ngClass]="stacked ? 'col-md-12 col-sm-3 no-padding' : 'col-md-3 col-sm-3 col-xs-12'">
     <div class="featured-text-content">
       <ul>
         <li>
@@ -58,4 +73,5 @@
       </ul>
     </div>
   </div>
+  -->
 </div>
