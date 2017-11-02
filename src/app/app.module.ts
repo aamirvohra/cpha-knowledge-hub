@@ -19,6 +19,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NavbarHoverDirective } from './navbar-hover.directive';
 import { HealthPharmacyEconomicsComponent } from './health-pharmacy-economics/health-pharmacy-economics.component';
 import { HealthPolicyRegulationComponent } from './health-policy-regulation/health-policy-regulation.component';
+import { AltHomeComponent } from './alt-home/alt-home.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HealthPolicyRegulationComponent } from './health-policy-regulation/heal
     NavbarHoverDirective,
     HealthPharmacyEconomicsComponent,
     HealthPolicyRegulationComponent,
+    AltHomeComponent,
   ],
   imports: [
     BrowserModule,

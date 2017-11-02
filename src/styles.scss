@@ -79,6 +79,15 @@ h4 {
   }
 }
 
+.btn-primary {
+  background-color: #ac142a;
+  color: white;
+
+  &:hover {
+    background-color: #ac142a;
+  }
+}
+
 .icons {
   padding-right: 0;
   margin-top: 35px;
