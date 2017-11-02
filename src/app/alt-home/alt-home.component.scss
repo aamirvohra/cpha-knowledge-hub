@@ -2,6 +2,15 @@
   padding: 180px 60px;
   background: #f5f5f5 url("../../assets/img/home-circle.png") no-repeat 120% 175%;
 
+  @media (max-width: 991px) {
+    text-align: center;
+    padding-top: 40px;
+    margin: 15px 0;
+    background-position: 50% 138%;
+    padding-bottom: 450px;
+    background-size: 70%;
+  }
+
   .title {
     color: #a91c30;
     margin-bottom: 20px;
