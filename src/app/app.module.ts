@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { RegulationComponent } from './regulation/regulation.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BsDatepickerModule, PaginationModule } from 'ngx-bootstrap';
+import { BsDatepickerModule, PaginationModule, ModalModule } from 'ngx-bootstrap';
 import { FeaturedContentComponent } from './featured-content/featured-content.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { LoginComponent } from './login/login.component';
@@ -20,6 +20,7 @@ import { NavbarHoverDirective } from './navbar-hover.directive';
 import { HealthPharmacyEconomicsComponent } from './health-pharmacy-economics/health-pharmacy-economics.component';
 import { HealthPolicyRegulationComponent } from './health-policy-regulation/health-policy-regulation.component';
 import { AltHomeComponent } from './alt-home/alt-home.component';
+import { ManageAccountComponent } from './manage-account/manage-account.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { AltHomeComponent } from './alt-home/alt-home.component';
     HealthPharmacyEconomicsComponent,
     HealthPolicyRegulationComponent,
     AltHomeComponent,
+    ManageAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import { AltHomeComponent } from './alt-home/alt-home.component';
     ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

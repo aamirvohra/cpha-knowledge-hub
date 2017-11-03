@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './alt-home.component.html',
   styleUrls: ['./alt-home.component.scss']
 })
+
 export class AltHomeComponent implements OnInit {
 
   constructor() { }

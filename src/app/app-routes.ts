@@ -11,6 +11,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HealthPharmacyEconomicsComponent } from './health-pharmacy-economics/health-pharmacy-economics.component';
 import { HealthPolicyRegulationComponent } from './health-policy-regulation/health-policy-regulation.component';
 import { AltHomeComponent } from './alt-home/alt-home.component';
+import { ManageAccountComponent } from './manage-account/manage-account.component';
 
 const ROUTES: Routes = [
   {
@@ -44,6 +45,10 @@ const ROUTES: Routes = [
   {
     path: 'health-policy-regulation',
     component: HealthPolicyRegulationComponent,
+  },
+  {
+    path: 'my-account',
+    component: ManageAccountComponent,
   },
 
 ];
