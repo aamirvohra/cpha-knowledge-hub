@@ -16,7 +16,7 @@ export class BreadcrumbsComponent implements OnInit {
         event => event instanceof NavigationEnd)
       .subscribe(
         (event: NavigationEnd) => {
-          this.getBreadcrumbs(event.url);
+          this.breadcrumbs.push(...this.getBreadcrumbs(this.router.routerState, router.routerState.root));
         }
       );
 
@@ -26,12 +26,17 @@ export class BreadcrumbsComponent implements OnInit {
   ngOnInit() {
   }
 
-  private getBreadcrumbs(url: string) {
-    if (url.indexOf('/') === 0) {
-      url = url.substring(1);
+  private getBreadcrumbs(state: any, parent: any) {
+    let data: Array<string> = [];
+    if(parent && parent.snapshot.data && parent.snapshot.data.breadcrumb) {
+      data.push(parent.snapshot.data.breadcrumb);
     }
 
-    this.breadcrumbs = this.breadcrumbs.concat(url.split('/'));
+    if(state && parent) {
+      data.push(... this.getBreadcrumbs(state, state.firstChild(parent)));
+    }
+
+    return data;
   }
 
 }
