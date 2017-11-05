@@ -1,8 +1,14 @@
 .my-account-wrapper {
   padding: 20px;
+  margin-bottom: 80px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 50px;
+  }
 
   @media (max-width: 767px) {
     padding: 0;
+    margin-bottom: 50px;
   }
 
   .title {
@@ -66,4 +72,87 @@
   .btn {
     vertical-align: inherit;
   }
+}
+
+/deep/ .modal {
+  padding: 10px;
+
+  .close {
+    padding-top: 5px;
+
+    .close-button {
+      vertical-align: text-bottom;
+    }
+  }
+
+  .modal-header {
+    h4 {
+      font-size: 1.571rem;
+      color: #000000;
+      font-family: Arial, Helvetica, Sans-serif;
+    }
+  }
+
+  .modal-body {
+    font-size: 1rem;
+
+    .sub-heading {
+      font-weight: bold;
+    }
+
+    .email-subscription {
+      padding-left: 5px;
+    }
+
+    .subscription-types {
+      padding: 15px;
+      background-color: #f5f5f5;
+
+      .form-group {
+        > div {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  input[type=checkbox] {
+    position:absolute;
+    z-index:-1000;
+    left:-1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height:1px;
+    width:1px;
+    margin:-1px;
+    padding:0;
+    border:0;
+  }
+
+  input[type=checkbox] + label {
+    padding-left:30px;
+    height:25px;
+    display:inline-block;
+    line-height:25px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:25px;
+    vertical-align:middle;
+    cursor:pointer;
+
+  }
+
+  input[type=checkbox]:checked + label {
+    background-position: 0 -25px;
+  }
+  label {
+    background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_391ce065f36b1460c4845fa9b5173fba.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
 }

@@ -62,7 +62,7 @@
     <div class="section-title">
       <h3>Subscription Preferences</h3> <span class="separator">|</span>
       <span>
-      <button class="btn btn-link">
+      <button (click)="openModal(subscriptionPreference)" class="btn btn-link">
         Manage
       </button>
     </span>
@@ -106,3 +106,85 @@
   </div>
 
 </div>
+
+<ng-template #subscriptionPreference>
+  <div class="modal-header">
+    <div class="col-md-10 col-sm-10 col-xs-10 no-padding">
+      <h4 class="modal-title">Manage Subscription Preferences</h4>
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-2">
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span class="close-button" aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="subscriptionForm">
+      <div class="row">
+        <div class="col-xs-12">
+          <label class="sub-heading">Subscription Status</label>
+        </div>
+      </div>
+
+      <div class="row email-subscription">
+        <div class="col-xs-12">
+          <label>
+            <input type="checkbox" value="true" formControlName="subscribe">
+            I wish to subscribe to email notifications</label>
+        </div>
+      </div>
+
+      <div class="subscription-types" *ngIf="subscriptionForm.controls.subscribe.value">
+        <div class="form-group">
+          <label for="emailAddress">Notifications Email</label>
+          <input type="email" class="form-control" id="emailAddress" formControlName="email">
+        </div>
+
+        <div class="form-group">
+          <label>Frequency</label>
+
+          <div>
+            <div>
+              <label for="daily">
+                <input type="radio" id="daily" value="daily" formControlName="frequency">
+                Daily
+              </label>
+            </div>
+
+            <div>
+              <label for="weekly">
+                <input type="radio" id="weekly" value="weekly" formControlName="frequency">
+                Weekly
+              </label>
+            </div>
+
+            <div>
+              <label for="biweekly">
+                <input type="radio" id="biweekly" value="biweekly" formControlName="frequency">
+                Bi-weekly
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Notify me regarding following categories:</label>
+
+          <div class="form-group">
+            <div formArrayName="categories" *ngFor="let entry of subscriptionForm.controls.categories.controls">
+              <label [for]="entry.controls.name.value">
+                <input type="checkbox" [id]="entry.controls.name.value" [formControl]="entry.controls.selected">
+                {{ entry.controls.name.value }}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="modalRef.hide()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="submit()">Save and Close</button>
+  </div>
+</ng-template>
