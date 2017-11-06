@@ -10,8 +10,12 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
 
+  public isUserAuthenticated: boolean;
+
   constructor(private router: Router,
               private titleService: Title) {
+    this.isUserAuthenticated = false;
+
     this.router.events
       .filter(
         e => e instanceof NavigationEnd)

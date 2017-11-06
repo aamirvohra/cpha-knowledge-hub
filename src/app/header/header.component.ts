@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AppURLRepo } from '../../utils/app-url-repo';
 
 @Component({
@@ -7,6 +7,9 @@ import { AppURLRepo } from '../../utils/app-url-repo';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @Input('isAuthenticated')
+  public isAuthenticated: boolean;
 
   public isSearchBarVisibleOnHandheldDevice: boolean;
 
@@ -18,7 +21,9 @@ export class HeaderComponent implements OnInit {
     this.isSearchBarVisibleOnHandheldDevice = true;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 
   toggleSearch() {
     this.isSearchBarVisibleOnHandheldDevice = !this.isSearchBarVisibleOnHandheldDevice;
