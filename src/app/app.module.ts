@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { RegulationComponent } from './regulation/regulation.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BsDatepickerModule, PaginationModule, ModalModule } from 'ngx-bootstrap';
+import { BsDatepickerModule, PaginationModule, ModalModule, BsDropdownModule } from 'ngx-bootstrap';
 import { FeaturedContentComponent } from './featured-content/featured-content.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { LoginComponent } from './login/login.component';
@@ -52,6 +52,7 @@ import { AuthService } from './auth.service';
     BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
     ModalModule.forRoot(),
+    BsDropdownModule.forRoot(),
   ],
   providers: [
     AuthGuard,

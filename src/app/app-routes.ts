@@ -19,7 +19,7 @@ const ROUTES: Routes = [
     path: '',
     component: AltHomeComponent,
     data: {
-      title: 'CPhA Knowledge Hub',
+      title: 'Home',
       breadcrumb : 'Home',
     }
   },
@@ -28,7 +28,7 @@ const ROUTES: Routes = [
     component: HomeComponent,
     canActivate: [AuthGuard],
     data: {
-      title: 'CPhA Knowledge Hub',
+      title: 'Home',
       breadcrumb : 'Home',
     }
   },

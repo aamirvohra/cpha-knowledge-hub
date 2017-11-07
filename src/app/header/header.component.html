@@ -1,16 +1,29 @@
 <div class="row header-wrapper" [ngClass]="{ 'guest-user' : !isAuthenticated }">
   <div class="col-md-4 col-md-offset-8 hidden-xs hidden-sm top-nav-menu">
     <ul class="nav nav-pills">
-      <li>
-        <a routerLinkActive="active"
-           routerLink="/login">Log in / Register</a>
+      <li role="presentation" class="dropdown" dropdown>
+        <a dropdownToggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <span class="userId">Jane Doe</span>
+          <img [src]="dropdownIcon">
+        </a>
+
+        <ul *dropdownMenu class="dropdown-menu" role="menu">
+          <li>
+            <a routerLink="/my-account" routerLinkActive="active" class="dropdown-item">
+              <img [src]="settingsIcon">Acccount Preferences
+            </a>
+          </li>
+          <li>
+            <a class="logout-initiator dropdown-item">
+              <img [src]="signoutIcon">Log Out
+            </a>
+          </li>
+        </ul>
+
       </li>
       <li>
-        <a routerLinkActive="active">About Us</a>
-      </li>
-      <li>
         <a routerLinkActive="active"
-           routerLink="/contact-us">Contact Us</a>
+           routerLink="/contact">Contact Us</a>
       </li>
     </ul>
   </div>

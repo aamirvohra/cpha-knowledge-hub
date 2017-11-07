@@ -45,6 +45,65 @@
       float: right;
       margin-top: 10px;
 
+      .dropdown {
+        a {
+          background-color: inherit;
+          // padding: 10px 7px;
+
+          .userId {
+            font-weight: bold;
+
+            @media (max-width: 991px) {
+              display: none;
+            }
+          }
+        }
+
+        a:hover {
+          background-color: inherit;
+        }
+      }
+
+      .dropdown-menu {
+        top: 120%;
+        padding: 15px 5px;
+        min-width: 225px;
+        right: -12px;
+        left: auto;
+
+        @media (max-width: 767px) {
+          top: 0;
+          padding: 15px 5px;
+        }
+
+        li {
+          border-right: 0;
+          margin-bottom: 7px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            font-weight: bold;
+            color: #336699;
+
+            img {
+              padding-right: 10px;
+            }
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: -18px;
+          right: 15px;
+          border: 9px solid rgba(0, 0, 0, .15);
+          border-bottom-color: white;
+        }
+      }
+
       li {
         padding: 0 10px;
         border-right: 1px solid #cacaca;

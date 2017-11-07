@@ -22,8 +22,7 @@ export class AppComponent implements OnInit {
       .filter(
         e => e instanceof NavigationEnd)
       .subscribe(event => {
-        let title = this.getTitle(
-          router.routerState, router.routerState.root).join('-') + ' - CPHA Knowledge Hub';
+        let title = this.getTitle(router.routerState, router.routerState.root).join('-') + ' - CPHA Knowledge Hub';
 
         this.titleService.setTitle(title);
       });

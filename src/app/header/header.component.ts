@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit {
   protected logo: string = AppURLRepo.KNOWLEDGE_HUB_LOGO;
   public cancelCross: string = AppURLRepo.CLOSE;
   public searchIcon: string = AppURLRepo.SEARCH_ICON;
+  public settingsIcon: string = AppURLRepo.SETTINGS;
+  public signoutIcon: string = AppURLRepo.LOG_OUT;
+  public dropdownIcon: string = AppURLRepo.DOWN;
 
   constructor() {
     this.isSearchBarVisibleOnHandheldDevice = true;

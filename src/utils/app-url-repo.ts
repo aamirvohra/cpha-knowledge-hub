@@ -32,4 +32,8 @@ export class AppURLRepo {
 
   public static readonly DOWN: string = AppURLRepo.IMG_URL + '/' + 'down-icon.png';
 
+  public static readonly SETTINGS: string = AppURLRepo.IMG_URL + '/' + 'settings-icon.png';
+
+  public static readonly LOG_OUT: string = AppURLRepo.IMG_URL + '/' + 'sign-out-icon.png';
+
 }
