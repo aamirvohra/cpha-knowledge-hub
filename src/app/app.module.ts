@@ -21,6 +21,8 @@ import { HealthPharmacyEconomicsComponent } from './health-pharmacy-economics/he
 import { HealthPolicyRegulationComponent } from './health-policy-regulation/health-policy-regulation.component';
 import { AltHomeComponent } from './alt-home/alt-home.component';
 import { ManageAccountComponent } from './manage-account/manage-account.component';
+import { AuthGuard } from './auth-guard';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,10 @@ import { ManageAccountComponent } from './manage-account/manage-account.componen
     PaginationModule.forRoot(),
     ModalModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

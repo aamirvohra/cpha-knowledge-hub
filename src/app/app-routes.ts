@@ -12,27 +12,30 @@ import { HealthPharmacyEconomicsComponent } from './health-pharmacy-economics/he
 import { HealthPolicyRegulationComponent } from './health-policy-regulation/health-policy-regulation.component';
 import { AltHomeComponent } from './alt-home/alt-home.component';
 import { ManageAccountComponent } from './manage-account/manage-account.component';
+import { AuthGuard } from './auth-guard';
 
 const ROUTES: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: AltHomeComponent,
     data: {
-      title: 'Home',
+      title: 'CPhA Knowledge Hub',
       breadcrumb : 'Home',
     }
   },
   {
-    path: 'alt-home',
-    component: AltHomeComponent,
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AuthGuard],
     data: {
-      title: 'Home',
+      title: 'CPhA Knowledge Hub',
       breadcrumb : 'Home',
     }
   },
   {
     path: 'regulation',
     component: RegulationComponent,
+    canActivate: [AuthGuard],
     data: {
       title: 'Regulation ',
       breadcrumb : 'Regulation',
@@ -41,6 +44,7 @@ const ROUTES: Routes = [
   {
     path: 'search',
     component: SearchResultsComponent,
+    canActivate: [AuthGuard],
     data: {
       title: 'Search',
       breadcrumb : 'Search',
@@ -55,7 +59,7 @@ const ROUTES: Routes = [
     }
   },
   {
-    path: 'contact-us',
+    path: 'contact',
     component: ContactUsComponent,
     data: {
       title: 'Contact Us',
@@ -65,6 +69,7 @@ const ROUTES: Routes = [
   {
     path: 'health-pharmacy-economics',
     component: HealthPharmacyEconomicsComponent,
+    canActivate: [AuthGuard],
     data: {
       title: 'Health Pharmacy Economics',
       breadcrumb : 'Health Pharmacy Economics',
@@ -73,6 +78,7 @@ const ROUTES: Routes = [
   {
     path: 'health-policy-regulation',
     component: HealthPolicyRegulationComponent,
+    canActivate: [AuthGuard],
     data: {
       title: 'Health Policy Regulation',
       breadcrumb : 'Health Policy Regulation',
@@ -81,6 +87,7 @@ const ROUTES: Routes = [
   {
     path: 'my-account',
     component: ManageAccountComponent,
+    canActivate: [AuthGuard],
     data: {
       title: 'Account Preferences',
       breadcrumb : 'Account Preferences',
